@@ -25,5 +25,17 @@
 		<tr><td style="color:white;"><i>12th:-</i></td><td style="color:violet;"><strong>CBSE @ Vidya Bharati Chinmaya Vidyalaya</strong></td></tr>
 		<tr><td style="color:white;"><i>Graduation:-</i></td><td style="color:violet;"><strong>CSE @ BIRLA INISTUTE OF TECHNOLOGY </strong></td></tr>
 	</table>
+	<script>
+		if('serviceWorker' in navigator){
+			navigator.serviceWorker.register('/sw.js')
+			.then(res=>{
+				console.info('SW Registered');
+		})
+			.catch(err=>{
+				console.error('Error in Registering SW',err)
+			})
+		}else
+		console.log('SW not supported');
+	</script>
 </body>
 </html>
